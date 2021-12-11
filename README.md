@@ -22,3 +22,7 @@ Code:
 const myPizza = new Pizza(["pepperoni", "pineapple"], "medium");  
 myPizza.totalPrice(); 
 
+Test 4: "Should return 13 if the pizza has two toppings and is large"  
+Code:  
+const myPizza = newPizza(["pepperoni", "pineapple"], "large");  
+myPizza.totalPrice();  
