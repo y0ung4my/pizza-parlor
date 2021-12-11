@@ -16,13 +16,22 @@ Test 2: "Should return 9 if the pizza has one topping"
 Code:  
 const myPizza = new Pizza(["pepperoni"], "medium");  
 myPizza.totalPrice(); 
+Expected Output: "9"  
 
 Test 3: "Should return 10 if the pizza has two toppings"  
 Code:  
 const myPizza = new Pizza(["pepperoni", "pineapple"], "medium");  
 myPizza.totalPrice(); 
+Expected Output: "10"  
 
 Test 4: "Should return 13 if the pizza has two toppings and is large"  
 Code:  
 const myPizza = newPizza(["pepperoni", "pineapple"], "large");  
 myPizza.totalPrice();  
+Expected Output: "13"  
+
+Test 5: "Should return 10 if the pizza has two toppings and is medium"  
+Code:  
+const myPizza = newPizza(["pepperoni", "pineapple"], "medium");  
+myPizza.totalPrice();  
+Expected Output: "10"  
