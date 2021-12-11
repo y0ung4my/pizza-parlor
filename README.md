@@ -17,3 +17,8 @@ Code:
 const myPizza = new Pizza(["pepperoni"], "medium");  
 myPizza.totalPrice(); 
 
+Test 3: "Should return 10 if the pizza has two toppings"  
+Code:  
+const myPizza = new Pizza(["pepperoni", "pineapple"], "medium");  
+myPizza.totalPrice(); 
+

@@ -12,6 +12,6 @@ Pizza.prototype.totalPrice = function() {
 }
 
 //Test Code for Pizza and totalPrice()
-const myPizza = new Pizza(["pepperoni"], "medium");
+const myPizza = new Pizza(["pepperoni", "pineapple"], "medium");
 myPizza.totalPrice();
 
