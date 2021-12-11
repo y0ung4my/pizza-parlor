@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pizza Parlor</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Build Your Own Pizza!</h1>
+    <div class="row">
+      <form id="formOne">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="checkbox" id="topping-one" name="topping-one" value="pepperoni">
+            <label for="topping-one"> pepperoni </label><br>
+            <input type="checkbox" id="topping-two" name="topping-two" value="pineapple">
+            <label for="topping-two"> pineapple </label><br>
+            <input type="checkbox" id="topping-three" name="topping-three" value="jalapeno">
+            <label for="topping-three"> jalapeno </label><br>
+            <input type="checkbox" id="topping-four" name="topping-four" value="cream-cheese">
+            <label for="topping-four"> cream cheese </label><br>
+            <input type="checkbox" id="topping-five" name="topping-five" value="ham">
+            <label for="topping-five"> ham </label><br>
+            <input type="checkbox" id="topping-six" name="topping-six" value="spinach">
+            <label for="topping-six"> spinach </label><br>
+            <input type="checkbox" id="topping-seven" name="topping-seven" value="bell-pepper">
+            <label for="topping-seven"> bell pepper </label><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="radio">
+            <h2>Select a size:</h2>
+            <label>
+              <input type="radio" name="size" value="medium" checked>
+              Medium
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="large">
+              Large
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn">Add Pizza!</button>
+      </form>
+    </div>
+    <div class="row">
+      <div class="col-md-12" id="pizza-confirm">
+        <h2>Your Pizza:</h2>
+        <h3>Toppings:</h3>
+        <ul id="final-toppings">
+        </ul>
+        <h3>Size:</h3>
+        <ul id="size">
+        </ul>
+        <h3>Price:</h3>
+        <p>$<span id="price"></span></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
