@@ -45,6 +45,7 @@ $(document).ready(function() {
       toppingsList(myPizza);
       $("#final-size").text(myPizza.size);
       $("#price").text(myPizza.totalPrice());
+      $("#pizza-confirm").show();
     });
   });
 });
