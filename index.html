@@ -3,7 +3,7 @@
 <head>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
   <title>Pizza Parlor</title>
 </head>
@@ -15,19 +15,19 @@
         <form id="formOne">
         <h2>Select Toppings:</h2>
         <div class="form-group">
-          <input type="checkbox" id="topping-one" name="topping-one" value="pepperoni">
+          <input type="checkbox" id="topping-one" name="toppings" value="pepperoni">
           <label for="topping-one"> pepperoni </label><br>
-          <input type="checkbox" id="topping-two" name="topping-two" value="pineapple">
+          <input type="checkbox" id="topping-two" name="toppings" value="pineapple">
           <label for="topping-two"> pineapple </label><br>
-          <input type="checkbox" id="topping-three" name="topping-three" value="jalapeno">
+          <input type="checkbox" id="topping-three" name="toppings" value="jalapeno">
           <label for="topping-three"> jalapeno </label><br>
-          <input type="checkbox" id="topping-four" name="topping-four" value="cream-cheese">
+          <input type="checkbox" id="topping-four" name="toppings" value="cream-cheese">
           <label for="topping-four"> cream cheese </label><br>
-          <input type="checkbox" id="topping-five" name="topping-five" value="ham">
+          <input type="checkbox" id="topping-five" name="toppings" value="ham">
           <label for="topping-five"> ham </label><br>
-          <input type="checkbox" id="topping-six" name="topping-six" value="spinach">
+          <input type="checkbox" id="topping-six" name="toppings" value="spinach">
           <label for="topping-six"> spinach </label><br>
-          <input type="checkbox" id="topping-seven" name="topping-seven" value="bell-pepper">
+          <input type="checkbox" id="topping-seven" name="toppings" value="bell-pepper">
           <label for="topping-seven"> bell pepper </label><br>
         </div>
         <div class="radio">
@@ -43,7 +43,7 @@
             Large
           </label>
         </div>
-        <button type="submit" class="btn btn-warning">Add Pizza!</button>
+        <button type="submit" class="btn btn-warning" id="add-pizza">Sumbit Pizza!</button>
       </form>
       </div>
       <div class="col-md-6" id="pizza-confirm">
@@ -52,7 +52,7 @@
         <ul id="final-toppings">
         </ul>
         <h3>Size:</h3>
-        <ul id="size">
+        <p><span id="final-size"></span></p>
         </ul>
         <h3>Price:</h3>
         <p>$<span id="price"></span></p>
