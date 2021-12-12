@@ -1,3 +1,5 @@
+//Business Logic
+
 //Pizza Constructor
 function Pizza(toppings, size) {
   this.toppings = toppings;
@@ -14,10 +16,6 @@ Pizza.prototype.totalPrice = function() {
   return price.toString();
 }
 
-//Test Code for Pizza and totalPrice()
-// const myPizza = new Pizza(["pepperoni", "pineapple"], "medium");
-// myPizza.totalPrice();
-
 //UI Logic
 function toppingsPopulation() {
   toppingsArray = [];
@@ -28,9 +26,11 @@ function toppingsPopulation() {
 }
 
 function toppingsList(newPizza) {
-  newPizza.toppings.forEach(function(item) {
-    $("ul#final-toppings").append("<li>" + item + "</li>");
-  });
+  if (newPizza.toppings.length === 0) {
+    $("#final-toppings").html("none")
+      } else {
+  $("#final-toppings").html(newPizza.toppings.join(", "));
+}
 }
 
 //jQuery
