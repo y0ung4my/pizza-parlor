@@ -1,5 +1,3 @@
-//Business Logic
-
 //Pizza Constructor
 function Pizza(toppings, size) {
   this.toppings = toppings;
@@ -16,6 +14,10 @@ Pizza.prototype.totalPrice = function() {
   return price.toString();
 }
 
+//Test Code for Pizza and totalPrice()
+// const myPizza = new Pizza(["pepperoni", "pineapple"], "medium");
+// myPizza.totalPrice();
+
 //UI Logic
 function toppingsPopulation() {
   toppingsArray = [];
@@ -27,9 +29,11 @@ function toppingsPopulation() {
 
 function toppingsList(newPizza) {
   if (newPizza.toppings.length === 0) {
-    $("#final-toppings").html("none")
+    $("ul#final-toppings").html("<li>" + "none" + "</li>")
       } else {
-  $("#final-toppings").html(newPizza.toppings.join(", "));
+  newPizza.toppings.forEach(function(item) {
+    $("ul#final-toppings").append("<li>" + item + "</li>");
+  });
 }
 }
 
@@ -41,11 +45,19 @@ $(document).ready(function() {
     const inputtedSize = $("input:radio[name=size]:checked").val();
     
     const myPizza = new Pizza(inputtedToppings, inputtedSize);
-    $("button#add-pizza").click(function() {
-      toppingsList(myPizza);
-      $("#final-size").text(myPizza.size);
-      $("#price").text(myPizza.totalPrice());
+
+    toppingsList(myPizza);
+    $("#final-size").text(myPizza.size);
+    $("#price").text(myPizza.totalPrice());
       $("#pizza-confirm").show();
+      $("#add-pizza").hide();
+
+      $("#new-pizza").on("click", function() {
+        $("#add-pizza").show();
+        $("#pizza-confirm").hide();
+        $("ul#final-toppings").html("");
+        document.getElementById("formOne").reset();
+
     });
   });
 });

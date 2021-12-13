@@ -28,7 +28,7 @@ https://y0ung4my.github.io/pizza-parlor/
 
 ## Known Bugs
 
-* _The submit button must be double clicked to successfully submit the form._
+* There is no shopping cart. "Add to cart" simply hides the order forcing the user to start a new pizza
 
 ## License
 
